@@ -1,0 +1,60 @@
+[gd_scene load_steps=10 format=3 uid="uid://cvc5i13obdc2"]
+
+[ext_resource type="Texture2D" uid="uid://cfajs0c2ncdx1" path="res://PNGs/Character_.png" id="1_xlrvy"]
+[ext_resource type="Texture2D" uid="uid://p5nss2c0hc4g" path="res://PNGs/Hat_.png" id="2_dn4md"]
+[ext_resource type="Script" uid="uid://dqrjkq461uhdg" path="res://scripts/hat_drag.gd" id="3_dn4md"]
+[ext_resource type="Texture2D" uid="uid://cje2wxcqu2scf" path="res://PNGs/Shirt_.png" id="4_q8juf"]
+[ext_resource type="Script" uid="uid://8hlemj1tidyf" path="res://scripts/shrit_drag.gd" id="5_b61bf"]
+[ext_resource type="Texture2D" uid="uid://d14n1um808nro" path="res://PNGs/Pant_.png" id="6_g2et6"]
+[ext_resource type="Script" uid="uid://bgh4t0e6emo3l" path="res://scripts/pant_drag.gd" id="7_7cuby"]
+[ext_resource type="Texture2D" uid="uid://cyg5ubbnmjw70" path="res://PNGs/Shoes_.png" id="8_qt2ni"]
+[ext_resource type="Script" uid="uid://c8xic5hw5k6am" path="res://scripts/shoes_drag.gd" id="9_ipqrg"]
+
+[node name="Character2D" type="Node2D"]
+
+[node name="Background" type="ColorRect" parent="."]
+offset_right = 1190.0
+offset_bottom = 674.0
+mouse_filter = 2
+color = Color(0.07560276, 0.66773933, 0.32554957, 1)
+
+[node name="BodySprite" type="Sprite2D" parent="."]
+position = Vector2(864, 339)
+scale = Vector2(0.57531196, 0.4987745)
+texture = ExtResource("1_xlrvy")
+
+[node name="SnapPoint_Hat" type="Marker2D" parent="."]
+position = Vector2(862, 111)
+
+[node name="Hat" type="Sprite2D" parent="."]
+position = Vector2(174.99998, 459)
+scale = Vector2(0.5145942, 0.582639)
+texture = ExtResource("2_dn4md")
+script = ExtResource("3_dn4md")
+
+[node name="SnapPoint_Shirt" type="Marker2D" parent="."]
+position = Vector2(863, 365)
+
+[node name="Shirt" type="Sprite2D" parent="."]
+position = Vector2(431, 456)
+scale = Vector2(0.5761348, 0.51481044)
+texture = ExtResource("4_q8juf")
+script = ExtResource("5_b61bf")
+
+[node name="SnapPoint_Pant" type="Marker2D" parent="."]
+position = Vector2(864, 461)
+
+[node name="Pant" type="Sprite2D" parent="."]
+position = Vector2(169.00006, 267)
+scale = Vector2(0.5701442, 0.54007196)
+texture = ExtResource("6_g2et6")
+script = ExtResource("7_7cuby")
+
+[node name="SnapPoint_Shoes" type="Marker2D" parent="."]
+position = Vector2(864, 528)
+
+[node name="Shoes" type="Sprite2D" parent="."]
+position = Vector2(422, 264)
+scale = Vector2(0.5743355, 0.62222236)
+texture = ExtResource("8_qt2ni")
+script = ExtResource("9_ipqrg")
