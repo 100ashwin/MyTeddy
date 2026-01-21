@@ -34,7 +34,7 @@ jobs:
     - name: Set up Godot 4.5
       uses: vitorgus/setup-godot@v1
       with:
-        godot-version: 4.5.stable
+        godot-version: 4.5.0   # <-- Correct format
         download-templates: true
 
     # Build APK
