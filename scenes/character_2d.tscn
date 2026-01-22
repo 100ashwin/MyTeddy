@@ -13,48 +13,76 @@
 [node name="Character2D" type="Node2D"]
 
 [node name="Background" type="ColorRect" parent="."]
-offset_right = 1190.0
-offset_bottom = 674.0
+offset_right = 1443.0
+offset_bottom = 930.0
 mouse_filter = 2
 color = Color(0.07560276, 0.66773933, 0.32554957, 1)
 
 [node name="BodySprite" type="Sprite2D" parent="."]
-position = Vector2(864, 339)
+position = Vector2(640, 281)
 scale = Vector2(0.57531196, 0.4987745)
 texture = ExtResource("1_xlrvy")
 
 [node name="SnapPoint_Hat" type="Marker2D" parent="."]
-position = Vector2(862, 111)
+position = Vector2(636, 62)
 
 [node name="Hat" type="Sprite2D" parent="."]
-position = Vector2(174.99998, 459)
+position = Vector2(253, 597)
 scale = Vector2(0.5145942, 0.582639)
 texture = ExtResource("2_dn4md")
 script = ExtResource("3_dn4md")
 
 [node name="SnapPoint_Shirt" type="Marker2D" parent="."]
-position = Vector2(863, 365)
+position = Vector2(637, 311)
 
 [node name="Shirt" type="Sprite2D" parent="."]
-position = Vector2(431, 456)
+position = Vector2(513, 604)
 scale = Vector2(0.5761348, 0.51481044)
 texture = ExtResource("4_q8juf")
 script = ExtResource("5_b61bf")
 
 [node name="SnapPoint_Pant" type="Marker2D" parent="."]
-position = Vector2(864, 461)
+position = Vector2(639, 397)
 
 [node name="Pant" type="Sprite2D" parent="."]
-position = Vector2(169.00006, 267)
+position = Vector2(764, 601)
 scale = Vector2(0.5701442, 0.54007196)
 texture = ExtResource("6_g2et6")
 script = ExtResource("7_7cuby")
 
 [node name="SnapPoint_Shoes" type="Marker2D" parent="."]
-position = Vector2(864, 528)
+position = Vector2(641, 470)
 
 [node name="Shoes" type="Sprite2D" parent="."]
-position = Vector2(422, 264)
+position = Vector2(1011, 602.99994)
 scale = Vector2(0.5743355, 0.62222236)
 texture = ExtResource("8_qt2ni")
 script = ExtResource("9_ipqrg")
+
+[node name="Panel_Shoes" type="Panel" parent="."]
+offset_left = 901.0
+offset_top = 500.0
+offset_right = 1118.0
+offset_bottom = 690.0
+mouse_filter = 2
+
+[node name="Panel_Pant" type="Panel" parent="."]
+offset_left = 649.0
+offset_top = 502.0
+offset_right = 873.0
+offset_bottom = 694.0
+mouse_filter = 2
+
+[node name="Panel_Shirt" type="Panel" parent="."]
+offset_left = 397.0
+offset_top = 502.0
+offset_right = 620.0
+offset_bottom = 695.0
+mouse_filter = 2
+
+[node name="Panel_Hat" type="Panel" parent="."]
+offset_left = 128.0
+offset_top = 499.0
+offset_right = 364.0
+offset_bottom = 690.0
+mouse_filter = 2
