@@ -7,37 +7,36 @@ on:
 
 jobs:
   export-android:
-    name: Export Android APK
     runs-on: ubuntu-latest
 
     steps:
     - name: Checkout
       uses: actions/checkout@v3
 
-    # Setup Godot 4.5 headless + export templates
-    - name: Setup Godot 4.5
-      uses: vitorgus/setup-godot@v2
+    # Setup Godot 4.5.1 (headless + export templates)
+    - name: Setup Godot
+      uses: vitorgus/setup-godot@v1
       with:
-        version: "4.5.0"
+        version: "4.5.1"
         include-templates: true
 
-    # Setup Android SDK + NDK + Java (working config)
+    # Install Android SDK + tools
     - name: Setup Android SDK
       uses: android-actions/setup-android@v3
       with:
         accept-licenses: true
 
-    - name: Install Android Build Tools
+    - name: Install Android components
       run: |
         sdkmanager "platforms;android-33" "build-tools;33.0.2" "platform-tools" "ndk;25.1.8937393"
 
-    # Build the APK
-    - name: Build APK
+    # Export APK
+    - name: Export APK
       run: |
         mkdir -p export
         godot --headless --export-release "Android" "export/MyTeddy.apk"
 
-    # Upload APK as downloadable artifact
+    # Upload APK
     - name: Upload APK
       uses: actions/upload-artifact@v4
       with:
